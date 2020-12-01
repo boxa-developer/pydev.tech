@@ -11,10 +11,15 @@ body{
 .button{
     width: 160px;
     height: 41px;
+    margin: 8px;
     background: #F9E254;
     border-radius: 8px;
     border: none;
     outline: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 canvas {
