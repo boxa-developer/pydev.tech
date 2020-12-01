@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.shortcuts import render
+from django.shortcuts import redirect
 
 
 def index(request):
-    return render(request, 'index.html')
+    return redirect('https://www.linkedin.com/in/bakhodir-ramazonov-b1255a1a9/')
 
 
 urlpatterns = [
