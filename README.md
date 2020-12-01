@@ -25,7 +25,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="gitfiles/images/teaser.png" alt="Logo" width="150" height="150">
+    <img src="gitfiles/images/teaser.png" alt="Logo" width="200" height="150">
   </a>
 
   <h3 align="center">pydev.tech</h3>
