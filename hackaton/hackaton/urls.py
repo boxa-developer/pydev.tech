@@ -19,7 +19,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'front/index.html')
+    return render(request, 'index.html')
 
 
 urlpatterns = [
