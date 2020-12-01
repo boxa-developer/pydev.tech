@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
   <meta charset="utf-8">
   <title>eStartup Bootstrap Template</title>
@@ -8,25 +9,25 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'img/favicon.png' }%" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
   <!-- Bootstrap css -->
   <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' }%" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.theme.default.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/modal-video/css/modal-video.min.css' %}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: eStartup
@@ -77,7 +78,7 @@
     <div class="hero-container">
       <h1>Welcome to eStartups</h1>
       <h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2>
-      <img src="img/hero-img.png" alt="Hero Imgs">
+      <img src="{% static 'img/hero-img.png' %}" alt="Hero Imgs">
       <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
       <div class="btns">
         <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
@@ -107,7 +108,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 
-            <img src="img/svg/cloud.svg" alt="img" class="img-fluid">
+            <img src="{% static 'img/svg/cloud.svg' %}" alt="img" class="img-fluid">
             <h4>introducing whatsapp</h4>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
             <a href="#">read more</a>
@@ -118,7 +119,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 
-            <img src="img/svg/planet.svg" alt="img" class="img-fluid">
+            <img src="{% static 'img/svg/planet.svg' %}" alt="img" class="img-fluid">
             <h4>user friendly interface</h4>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
             <a href="#">read more</a>
@@ -129,7 +130,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 
-            <img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
+            <img src="{% static 'img/svg/asteroid.svg' %}" alt="img" class="img-fluid">
             <h4>build the app everyone love</h4>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
             <a href="#">read more</a>
@@ -150,7 +151,7 @@
       <div class="row justify-content-center">
 
         <div class="col-md-5 col-lg-3">
-          <img src="img/about-img.png" alt="About">
+          <img src="{% static 'img/about-img.png' %}" alt="About">
         </div>
 
         <div class="col-md-7 col-lg-5">
@@ -175,89 +176,7 @@
     </div>
   </section>
 
-  <!--==========================
-    Features Section
-  ============================-->
 
-  <section id="features" class="padd-section text-center wow fadeInUp">
-
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>Amazing Features.</h2>
-        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/paint-palette.svg" alt="img" class="img-fluid">
-            <h4>creative design</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/vector.svg" alt="img" class="img-fluid">
-            <h4>Retina Ready</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/design-tool.svg" alt="img" class="img-fluid">
-            <h4>easy to use</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
-            <h4>Free Updates</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
-            <h4>Free Updates</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/cloud-computing.svg" alt="img" class="img-fluid">
-            <h4>App store support</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/pixel.svg" alt="img" class="img-fluid">
-            <h4>Perfect Pixel</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/code.svg" alt="img" class="img-fluid">
-            <h4>clean codes</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!--==========================
     Screenshots Section
@@ -274,15 +193,15 @@
     <div class="container">
       <div class="owl-carousel owl-theme">
 
-        <div><img src="img/screen/1.jpg" alt="img"></div>
-        <div><img src="img/screen/2.jpg" alt="img"></div>
-        <div><img src="img/screen/3.jpg" alt="img"></div>
-        <div><img src="img/screen/4.jpg" alt="img"></div>
-        <div><img src="img/screen/5.jpg" alt="img"></div>
-        <div><img src="img/screen/6.jpg" alt="img"></div>
-        <div><img src="img/screen/7.jpg" alt="img"></div>
-        <div><img src="img/screen/8.jpg" alt="img"></div>
-        <div><img src="img/screen/9.jpg" alt="img"></div>
+        <div><img src="{% static 'img/screen/1.jpg' %}" alt="img"></div>
+        <div><img src="{% static 'img/screen/2.jpg' %}" alt="img"></div>
+        <div><img src="{% static 'img/screen/3.jpg' %}" alt="img"></div>
+        <div><img src="{% static 'img/screen/4.jpg' %}" alt="img"></div>
+        <div><img src="{% static 'img/screen/5.jpg' %}" alt="img"></div>
+        <div><img src="{% static 'img/screen/6.jpg' %}" alt="img"></div>
+        <div><img src="{% static 'img/screen/7.jpg' %}" alt="img"></div>
+        <div><img src="{% static 'img/screen/8.jpg' %}" alt="img"></div>
+        <div><img src="{% static 'img/screen/9.jpg' %}" alt="img"></div>
 
       </div>
     </div>
@@ -324,7 +243,7 @@
 
         <div class="col-md-6 col-md-4 col-lg-3">
           <div class="team-block bottom">
-            <img src="img/team/1.jpg" class="img-responsive" alt="img">
+            <img src="{% static 'img/team/1.jpg' %}" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -339,7 +258,7 @@
 
        <div class="col-md-6 col-md-4 col-lg-3">
           <div class="team-block bottom">
-            <img src="img/team/2.jpg" class="img-responsive" alt="img">
+            <img src="{% static 'img/team/2.jpg' %}" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -354,7 +273,7 @@
 
         <div class="col-md-6 col-md-4 col-lg-3">
           <div class="team-block bottom">
-            <img src="img/team/3.jpg" class="img-responsive" alt="img">
+            <img src="{% static 'img/team/3.jpg' %}" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -369,7 +288,7 @@
 
         <div class="col-md-6 col-md-4 col-lg-3">
           <div class="team-block bottom">
-            <img src="img/team/4.jpg" class="img-responsive" alt="img">
+            <img src="{% static 'img/team/4.jpg' %}" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -570,7 +489,7 @@
 
         <div class="col-md-6 col-lg-4">
           <div class="block-blog text-left">
-            <a href="#"><img src="img/blog/blog-image-1.jpg" alt="img"></a>
+            <a href="#"><img src="{% static 'img/blog/blog-image-1.jpg' %}" alt="img"></a>
             <div class="content-blog">
               <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
               <span>05, juin 2017</span>
@@ -581,7 +500,7 @@
 
         <div class="col-md-6 col-lg-4">
           <div class="block-blog text-left">
-            <a href="#"><img src="img/blog/blog-image-2.jpg" class="img-responsive" alt="img"></a>
+            <a href="#"><img src="{% static 'img/blog/blog-image-2.jpg' %}" class="img-responsive" alt="img"></a>
             <div class="content-blog">
               <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
               <span>05, juin 2017</span>
@@ -592,7 +511,7 @@
 
         <div class="col-md-6 col-lg-4">
           <div class="block-blog text-left">
-            <a href="#"><img src="img/blog/blog-image-3.jpg" class="img-responsive" alt="img"></a>
+            <a href="#"><img src="{% static 'img/blog/blog-image-3.jpg' %}" class="img-responsive" alt="img"></a>
             <div class="content-blog">
               <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
               <span>05, juin 2017</span>
@@ -810,20 +729,20 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/modal-video/js/modal-video.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/modal-video/js/modal-video.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="{% static 'contactform/contactform.js' %}"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 </html>
