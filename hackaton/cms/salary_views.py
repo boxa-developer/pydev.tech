@@ -70,11 +70,11 @@ def add_account(request):
 
 
 @csrf_exempt
-@api_view(['POST'])
+@api_view(['GET'])
 def retrieve_accounts(request):
     send_data = []
     query_data = select_query("""
-        select 
+        select * from salary.employees
     """)
 
     for row in query_data:
