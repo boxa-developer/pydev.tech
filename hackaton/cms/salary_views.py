@@ -59,17 +59,13 @@ def add_account(request):
             salary.positions p
         where p.position = '{}')
         WHERE id={}
-    returning id;
+    returning salary;
         """.format(data['bonus'], data['position'], returning_id[0][0]))
-
-    print(request.data)
+    logger.success(f"Employee set  salary:{r_x[0][0]}.")
     send_data = {
         "status": 200,
         "message": "SUCCESS"
     }
-    # # except Exception as e:
-    # #     logger.error(f"Error occurred {e}")
-    # # return HttpResponse('ok')
     return JsonResponse(send_data, safe=False)
 
 
