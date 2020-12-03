@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'f#zz%vr4q9l^c-=dzzyj-*9(o_!hs)l+(w-y5h3awz0!m4jin1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "*"
@@ -39,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'cms'
 ]
 
 MIDDLEWARE = [
@@ -49,10 +52,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'middlewares.JWTAuthMiddleware'
+]
+
+SAFE_URLS = [
+    '/cms/account/add',
+    '/cms/account/check',
+    '/'
 ]
 
 ROOT_URLCONF = 'hackaton.urls'
-import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -79,8 +88,13 @@ WSGI_APPLICATION = 'hackaton.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'cms_tuit',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '134.122.57.32',
+        # 'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
