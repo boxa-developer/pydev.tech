@@ -74,9 +74,9 @@ def add_account(request):
 def retrieve_accounts(request):
     send_data = []
     query_data = select_query("""
-        select * from salary.employees
+        select name, surname, position, salary from salary.employees
     """)
-
+    print(query_data)
     for row in query_data:
         (name, surname, position, salary) = row
         send_data.append(dict(
@@ -84,6 +84,7 @@ def retrieve_accounts(request):
             surname=surname,
             position=position,
             salary=salary))
+    print(send_data)
 
     return JsonResponse(send_data, safe=False)
 
