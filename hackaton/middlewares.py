@@ -16,13 +16,13 @@ class JWTAuthMiddleware:
         self.SAFE_URLS = settings.SAFE_URLS
 
     def __call__(self, request):
-        print('middle', request.path)
-        if request.path not in self.SAFE_URLS:
-            try:
-                jwt.decode(request.META["HTTP_TOKEN"], JWT_KEY, algorithms=['HS256'])
-            except Exception:
-                return HttpResponse(
-                    f' You should Login <a href={request.build_absolute_uri("/account/check")}> Login </a> ')
+        print()
+        # if request.path not in self.SAFE_URLS:
+        #     try:
+        #         jwt.decode(request.META["HTTP_TOKEN"], JWT_KEY, algorithms=['HS256'])
+        #     except Exception:
+        #         return HttpResponse(
+        #             f' You should Login <a href={request.build_absolute_uri("/account/check")}> Login </a> ')
 
         response = self.get_response(request)
 

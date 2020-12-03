@@ -54,7 +54,7 @@ def add_account(request):
 
     r_x = insert("""
         UPDATE salary.employees  SET 
-            salary = {}+ (select (select salary_base from salary.config  where id=1)*p.score salary 
+            salary = (select value from salary.bonuses where bonus='{}')+ (select (select salary_base from salary.config  where id=1)*p.score salary 
         from 
             salary.positions p
         where p.position = '{}')
