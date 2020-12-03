@@ -10,6 +10,13 @@ def select_query(query_str):
     return rows
 
 
+
+def call_salary_procedure(query_str):
+    with connection.cursor() as cursor:
+        cursor.execute(
+            query_str
+        )
+
 def insert(query_str):
     with connection.cursor() as cursor:
         cursor.execute(

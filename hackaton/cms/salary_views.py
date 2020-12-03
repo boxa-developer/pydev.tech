@@ -41,23 +41,28 @@ def get_base_salary(request):
 @csrf_exempt
 @api_view(['POST'])
 def add_account(request):
-    # data = request.data
-    # send_data = {
-    #     "status": 400,
-    #     "message": "ERROR"
-    # }
-    # try:
-    #     returning_id = insert("""
-    #         INSERT INTO employees
-    #             (surname, name)
-    #         VALUES
-    #             ('{}', '{}')
-    #         RETURNING id;
-    #     """.format(data["surname"], data["name"]))
-    #
-    #     logger.success(f"Employee added id:{returning_id}.")
-    #
-    # print(request.data)
+    data = request.data
+
+    returning_id = insert("""
+        INSERT INTO salary.employees
+            (surname, name, position)
+        VALUES
+            ('{}', '{}', '{}')
+        RETURNING id;        
+    """.format(data["surname"], data["name"], data["position"]))
+    logger.success(f"Employee added id:{returning_id}.")
+
+    r_x = insert("""
+        UPDATE salary.employees  SET 
+            salary = {}+ (select (select salary_base from salary.config  where id=1)*p.score salary 
+        from 
+            salary.positions p
+        where p.position = '{}')
+        WHERE id={}
+    returning id;
+        """.format(data['bonus'], data['position'], returning_id[0][0]))
+
+    print(request.data)
     send_data = {
         "status": 200,
         "message": "SUCCESS"
@@ -73,7 +78,7 @@ def add_account(request):
 def retrieve_accounts(request):
     send_data = []
     query_data = select_query("""
-        
+        select 
     """)
 
     for row in query_data:
