@@ -84,7 +84,6 @@ def retrieve_accounts(request):
             surname=surname,
             position=position,
             salary=salary))
-    print(send_data)
 
     return JsonResponse(send_data, safe=False)
 
