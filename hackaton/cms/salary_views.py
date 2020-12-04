@@ -114,7 +114,7 @@ def delete_account(request):
     data = request.data
 
     delete("""
-        DELETE FROM employees
+        DELETE FROM salary.employees
         WHERE name = '{}' and surname = '{}';
     """.format(data["name"], data["surname"]))
 
