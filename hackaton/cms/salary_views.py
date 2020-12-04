@@ -112,7 +112,7 @@ def edit_account(request):
 @api_view(['DELETE'])
 def delete_account(request):
     data = request.data
-
+    print(data)
     delete("""
         DELETE FROM salary.employees
         WHERE name = '{}' and surname = '{}';
